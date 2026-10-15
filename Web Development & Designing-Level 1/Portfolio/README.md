@@ -1,6 +1,6 @@
 # Personal Developer Portfolio — Smaran Bhoopalam
 
-A personal developer portfolio built as part of the **OASIS Infobyte Web Development & Designing Internship — Level 2, Task 2: Personal Portfolio**. It uses a dark, technical, and minimalist aesthetic to showcase skills, interests, and selected projects in software engineering, embedded systems, and AI.
+A personal developer portfolio built as part of the **OASIS Infobyte Web Development & Designing Internship — Level 1, Task 2: Personal Portfolio**. It uses a dark, technical, and minimalist aesthetic to showcase skills, interests, and selected projects in software engineering, embedded systems, and AI.
 
 ## Features
 
@@ -40,7 +40,7 @@ Portfolio/
 
 2. Navigate to the portfolio folder:
    ```
-   Web Development & Designing-Level 2/Portfolio/
+   Web Development & Designing-Level 1/Portfolio/
    ```
 
 3. Open `index.html` in any modern browser (Chrome, Firefox, Edge, Safari).
@@ -69,7 +69,7 @@ Portfolio/
 |--------------|------------------------------------------------|
 | Organization | OASIS Infobyte                                 |
 | Track        | Web Development & Designing                    |
-| Level        | Level 2                                        |
+| Level        | Level 1                                        |
 | Task         | Task 2 — Personal Portfolio                    |
 | Requirements | Hero/profile section, About, Skills, Projects, Contact, responsive layout, consistent branding |
 

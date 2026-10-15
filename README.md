@@ -1,81 +1,102 @@
-# CUPZILLA — Everyday Advertising
+# OASIS Infobyte Internship Projects
 
-**Your brand. In their hands.**
+**Internship track:** Web Development & Designing — Level 1
+**Intern:** Smaran Bhoopalam
+**GitHub:** [@smaranbhoopalam](https://github.com/smaranbhoopalam)
 
-Cupzilla is a landing page concept for a physical advertising platform that transforms everyday cups and food-service packaging into advertising opportunities. It connects advertisers with cafés, restaurants, and venues to help brands reach local audiences through real-world interactions.
+---
 
-This project was developed as part of the **OASIS Infobyte Web Development & Designing Internship — Level 1, Task 1: Landing Page**.
+This repository contains all projects completed as part of the [OASIS Infobyte](https://oasisinfobyte.com/) Web Development & Designing internship. Each task is contained in its own folder with its own README, source files, and assets.
 
-## Features
+---
 
-- **Responsive design** — adapts to desktop and mobile screen sizes.
-- **Sticky navigation** — provides convenient access to key sections.
-- **Hero section** — introduces Cupzilla's value proposition with a clear call to action.
-- **How It Works** — explains the platform concept.
-- **Advertiser and venue sections** — communicates the value offered to both sides of the platform.
-- **Brand-focused styling** — uses a coffee-inspired palette with green accents.
-- **CSS animations and transitions** — add subtle visual movement and interaction.
-- **Semantic HTML** — organizes the page into meaningful sections.
+## Task Index
 
-## Tech Stack
+| # | Project | Description | Technologies | Folder | Status |
+|---|---------|-------------|--------------|--------|--------|
+| Task 1 | **Cupzilla** | Landing page for a cup-based physical advertising platform | HTML5, CSS3 | [`Web Development & Designing-Level 1/Cupzilla/`](./Web%20Development%20%26%20Designing-Level%201/Cupzilla/) | ✅ Complete |
+| Task 2 | **Personal Portfolio** | Single-page developer portfolio showcasing skills and projects | HTML5, CSS3, Vanilla JS | [`Web Development & Designing-Level 1/Portfolio/`](./Web%20Development%20%26%20Designing-Level%201/Portfolio/) | ✅ Complete |
+| Task 3 | Temperature Converter | — | — | — | 🔲 Not started |
 
-- HTML5
-- CSS3
-- CSS Flexbox and Grid
-- Responsive media queries
-- SVG/CSS-based visuals
+---
 
-**JavaScript:** Not required for this task.
+## Task 1 — Cupzilla: Landing Page
 
-## Project Structure
+**Folder:** [`Web Development & Designing-Level 1/Cupzilla/`](./Web%20Development%20%26%20Designing-Level%201/Cupzilla/)
+
+Cupzilla is a landing page concept for a physical advertising platform that transforms everyday cups and food-service packaging into advertising opportunities. It connects advertisers with cafés, restaurants, and venues to reach local audiences through real-world interactions.
+
+**Key features:** responsive layout, sticky navigation, hero section with CTA, how-it-works walkthrough, advertiser and venue sections, CSS animations, semantic HTML.
+
+→ See [`Cupzilla/README.md`](./Web%20Development%20%26%20Designing-Level%201/Cupzilla/README.md) for full documentation.
+
+---
+
+## Task 2 — Personal Portfolio
+
+**Folder:** [`Web Development & Designing-Level 1/Portfolio/`](./Web%20Development%20%26%20Designing-Level%201/Portfolio/)
+
+A single-page personal developer portfolio with a dark, technical aesthetic. Showcases selected engineering projects, technical skills, and contact information.
+
+**Key features:** smooth-scroll navigation, responsive grid layout, project cards with tech tags, mobile hamburger menu, keyboard accessibility, Google Fonts.
+
+→ See [`Portfolio/README.md`](./Web%20Development%20%26%20Designing-Level%201/Portfolio/README.md) for full documentation.
+
+---
+
+## Repository Structure
 
 ```text
-WebDev-L1-LandingPage/
-├── assets/
-│   └── hero-cup.png
-├── index.html
-├── style.css
-└── README.md
+OIBSIP/
+├── README.md                                 ← This file — repository overview
+└── Web Development & Designing-Level 1/
+    ├── Cupzilla/                             ← Task 1: Landing Page
+    │   ├── assets/
+    │   │   └── hero-cup.png
+    │   ├── index.html
+    │   ├── style.css
+    │   └── README.md
+    └── Portfolio/                            ← Task 2: Personal Portfolio
+        ├── index.html
+        ├── style.css
+        └── README.md
 ```
 
-## Getting Started
+---
 
-1. Clone the repository:
+## Running Projects Locally
 
+All projects are static websites with no build step required.
+
+1. **Clone the repository:**
    ```bash
    git clone https://github.com/smaranbhoopalam/OIBSIP.git
    ```
 
-2. Open the `WebDev-L1-LandingPage` folder inside the cloned repository.
+2. **Navigate to the task folder** (e.g., Task 1):
+   ```
+   Web Development & Designing-Level 1/Cupzilla/
+   ```
 
-3. Open `index.html` in your browser.
+3. **Open `index.html`** in any modern browser (Chrome, Firefox, Edge, Safari).
 
-Alternatively, open the project in Visual Studio Code and use the Live Server extension for local preview.
+> **Tip:** Use the **Live Server** extension in VS Code for automatic reload on file save.
 
-## Learning Objectives
+---
 
-This project focuses on foundational front-end development skills:
+## Internship Details
 
-- Structuring webpages with HTML5.
-- Styling layouts using CSS3.
-- Creating responsive layouts with Flexbox and Grid.
-- Applying consistent typography, spacing, and colors.
-- Building accessible navigation and clear calls to action.
+| Field        | Value                          |
+|--------------|--------------------------------|
+| Organization | OASIS Infobyte                 |
+| Track        | Web Development & Designing    |
+| Level        | Level 1                        |
+| Intern       | Smaran Bhoopalam               |
 
-## Internship
-
-- **Organization:** OASIS Infobyte
-- **Track:** Web Development & Designing
-- **Level:** Level 1
-- **Task:** Task 1 — Landing Page
-- **Project:** Cupzilla
+---
 
 ## Author
 
 **Smaran Bhoopalam**
-
 GitHub: [@smaranbhoopalam](https://github.com/smaranbhoopalam)
-
----
-
-*Built to explore how everyday objects can become opportunities for real-world brand engagement.*s
+LinkedIn: [linkedin.com/in/smaran-bhoopalam](https://www.linkedin.com/in/smaran-bhoopalam/)
