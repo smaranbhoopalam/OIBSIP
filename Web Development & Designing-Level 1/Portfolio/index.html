@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smaran Bhoopalam | Developer Portfolio</title>
+    <meta name="description" content="Personal portfolio of Smaran Bhoopalam — aspiring engineer and developer working across embedded systems, IoT, cybersecurity, and software development.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">Smaran Bhoopalam</a>
+            <nav class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+                <a href="#contact" class="btn btn-outline nav-cta">Let's Talk</a>
+            </nav>
+            <button class="menu-toggle" aria-label="Toggle menu" onclick="document.body.classList.toggle('nav-open')">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <p class="greeting">Hello, I'm</p>
+                    <h1 class="name">Smaran Bhoopalam</h1>
+                    <h2 class="role">Aspiring Engineer & Developer</h2>
+                    <p class="hero-intro">
+                        Building at the intersection of software, hardware, and intelligence. 
+                        Passionate about creating real-world systems through embedded systems, AI, and software development.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">Explore My Projects</a>
+                        <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <!-- Abstract technical visual representation -->
+                    <div class="tech-grid">
+                        <div class="grid-cell active"></div>
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell active"></div>
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell active"></div>
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell active"></div>
+                        <div class="grid-cell"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="section-header">
+                    <h2>01. About Me</h2>
+                    <div class="header-line"></div>
+                </div>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>
+                            I am a student driven by a deep curiosity for engineering, software, and technology-based problem-solving. My focus lies not just in writing code, but in understanding how multiple disciplines—from hardware to artificial intelligence—connect to form robust, real-world systems.
+                        </p>
+                        <p>
+                            Whether I'm working on embedded microcontrollers, analyzing network packets, or developing responsive web interfaces, I enjoy bridging the gap between physical and digital environments. I'm constantly learning and seeking opportunities to apply my theoretical knowledge to practical, impactful projects.
+                        </p>
+                    </div>
+                    <div class="about-image-placeholder">
+                        <div class="avatar-frame">
+                            <span class="avatar-icon">&lt;/&gt;</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills">
+            <div class="container">
+                <div class="section-header">
+                    <h2>02. Technical Skills</h2>
+                    <div class="header-line"></div>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Programming & Web</h3>
+                        <ul class="skill-list">
+                            <li>HTML5 & CSS3</li>
+                            <li>JavaScript</li>
+                            <li>C / C++</li>
+                            <li>Python</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Embedded & IoT</h3>
+                        <ul class="skill-list">
+                            <li>Microcontrollers</li>
+                            <li>ESP32 / ESP32-S3</li>
+                            <li>Sensor Integration</li>
+                            <li>Hardware Prototyping</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Cybersecurity & AI</h3>
+                        <ul class="skill-list">
+                            <li>Packet Analysis</li>
+                            <li>Network Fundamentals</li>
+                            <li>Machine Learning Basics</li>
+                            <li>Threat Identification</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects">
+            <div class="container">
+                <div class="section-header">
+                    <h2>03. Selected Projects</h2>
+                    <div class="header-line"></div>
+                </div>
+                <div class="project-list">
+                    
+                    <!-- Project 1 -->
+                    <article class="project-card">
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="project-number">01</span>
+                                <span class="project-category">Embedded & IoT</span>
+                            </div>
+                            <h3 class="project-title">SmartSense</h3>
+                            <div class="project-description">
+                                <p>A privacy-preserving occupancy and energy-management system. Explores sensor fusion, ESP32-S3 microcontrollers, and Wi-Fi signal analysis to optimize energy consumption without compromising user privacy.</p>
+                            </div>
+                            <ul class="project-tech">
+                                <li>ESP32-S3</li>
+                                <li>Sensor Fusion</li>
+                                <li>Wi-Fi Signal Analysis</li>
+                                <li>C++</li>
+                            </ul>
+                            <div class="project-links">
+                                <!-- Status badge only — no live demo or public repo URL available yet -->
+                                <span class="status-indicator development">In Development</span>
+                                <!-- TODO: Replace href with the real GitHub repository URL when available -->
+                                <!-- <a href="https://github.com/smaranbhoopalam/smartsense" target="_blank" rel="noopener noreferrer" class="github-link">View Source ↗</a> -->
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 2 -->
+                    <article class="project-card">
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="project-number">02</span>
+                                <span class="project-category">Hardware Engineering</span>
+                            </div>
+                            <h3 class="project-title">Adaptive Hydraulic Power-Splitting System</h3>
+                            <div class="project-description">
+                                <p>A wind-powered hydraulic engineering project that dynamically allocates power between irrigation systems and electricity generation based on real-time environmental demands. Selected as a finalist in the <strong>FPSI Fluid Power Challenge 2026</strong>.</p>
+                            </div>
+                            <ul class="project-tech">
+                                <li>Hydraulics</li>
+                                <li>Wind Power</li>
+                                <li>System Design</li>
+                                <li>Fluid Power</li>
+                            </ul>
+                            <div class="project-links">
+                                <!-- No live demo or public repository URL available -->
+                                <span class="status-indicator coming-soon">Documentation Pending</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 3 -->
+                    <article class="project-card">
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="project-number">03</span>
+                                <span class="project-category">Cybersecurity</span>
+                            </div>
+                            <h3 class="project-title">Network Threat Identification</h3>
+                            <div class="project-description">
+                                <p>A cybersecurity-focused initiative involving practical application of security concepts, detailed packet analysis, and systematic identification of potential network threats.</p>
+                            </div>
+                            <ul class="project-tech">
+                                <li>Packet Analysis</li>
+                                <li>Networking</li>
+                                <li>Threat Modeling</li>
+                            </ul>
+                            <div class="project-links">
+                                <!-- No live demo or public repository URL available yet -->
+                                <span class="status-indicator development">In Development</span>
+                                <!-- TODO: Replace href with the real GitHub repository URL when available -->
+                                <!-- <a href="https://github.com/smaranbhoopalam/network-threat-id" target="_blank" rel="noopener noreferrer" class="github-link">View Source ↗</a> -->
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="contact-wrapper">
+                    <div class="contact-header">
+                        <h2>04. What's Next?</h2>
+                        <h3 class="contact-title">Get In Touch</h3>
+                        <p class="contact-desc">
+                            I'm currently exploring new opportunities and open to discussions about software development, embedded systems, and tech projects. My inbox is always open.
+                        </p>
+                        <a href="mailto:smaran.sai79@gmail.com" class="btn btn-primary contact-btn">Say Hello</a>
+                    </div>
+                    
+                    <div class="contact-details">
+                        <div class="contact-info-card">
+                            <h4>Email</h4>
+                            <a href="mailto:smaran.sai79@gmail.com" class="contact-link">smaran.sai79@gmail.com</a>
+                        </div>
+                        <div class="contact-info-card">
+                            <h4>GitHub</h4>
+                            <a href="https://github.com/smaranbhoopalam" target="_blank" rel="noopener noreferrer" class="contact-link">github.com/smaranbhoopalam</a>
+                        </div>
+                        <div class="contact-info-card">
+                            <h4>LinkedIn</h4>
+                            <a href="https://www.linkedin.com/in/smaran-bhoopalam/" target="_blank" rel="noopener noreferrer" class="contact-link">linkedin.com/in/smaran-bhoopalam</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo">Smaran Bhoopalam</span>
+                    <p>Building real-world systems.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://github.com/smaranbhoopalam" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">GitHub</a>
+                    <a href="https://www.linkedin.com/in/smaran-bhoopalam/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">LinkedIn</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> Smaran Bhoopalam. Designed for OASIS Infobyte Internship.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Close mobile nav when a link is clicked or when clicking outside the navbar
+        document.querySelectorAll('.nav-links a').forEach(function (link) {
+            link.addEventListener('click', function () {
+                document.body.classList.remove('nav-open');
+            });
+        });
+
+        document.addEventListener('click', function (e) {
+            var navbar = document.querySelector('.navbar');
+            if (document.body.classList.contains('nav-open') && !navbar.contains(e.target)) {
+                document.body.classList.remove('nav-open');
+            }
+        });
+    </script>
+</body>
+</html>
