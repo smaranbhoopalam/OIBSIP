@@ -1,0 +1,407 @@
+/* ─────────────────────────────────────────────────────────────────
+   Design tokens
+   ───────────────────────────────────────────────────────────────── */
+:root {
+  --color-bg:           #F5F7FA;
+  --color-surface:      #FFFFFF;
+  --color-text-primary: #182230;
+  --color-text-muted:   #667085;
+  --color-accent:       #2563EB;
+  --color-accent-light: #EFF6FF;
+  --color-border:       #E4E7EC;
+  --color-error:        #B91C1C;
+  --color-error-bg:     #FEF2F2;
+  --color-success:      #15803D;
+
+  --shadow-card: 0 1px 3px rgba(16, 24, 40, 0.08),
+                 0 4px 16px rgba(16, 24, 40, 0.06);
+
+  --radius-card:   16px;
+  --radius-input:  8px;
+  --radius-btn:    8px;
+
+  /* System font stack — no external dependencies */
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+               'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+  --font-mono: ui-monospace, 'Cascadia Code', 'Fira Mono', Consolas, monospace;
+
+  --transition-fast: 0.15s ease;
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   Reset & base
+   ───────────────────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   Page wrapper
+   ───────────────────────────────────────────────────────────────── */
+.page-wrapper {
+  width: 100%;
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   Header
+   ───────────────────────────────────────────────────────────────── */
+.page-header {
+  text-align: center;
+}
+
+.page-title {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--color-text-primary);
+  margin-bottom: 6px;
+}
+
+.page-subtitle {
+  font-size: 0.9375rem;
+  color: var(--color-text-muted);
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   Card
+   ───────────────────────────────────────────────────────────────── */
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   Field group (label + control cluster)
+   ───────────────────────────────────────────────────────────────── */
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.field-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-text-primary);
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   Input row (numeric field + unit select side by side)
+   ───────────────────────────────────────────────────────────────── */
+.input-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+  align-items: stretch;
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   Numeric input
+   ───────────────────────────────────────────────────────────────── */
+.temp-input {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 1.125rem;
+  font-family: var(--font-mono);
+  color: var(--color-text-primary);
+  background: var(--color-surface);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-input);
+  outline: none;
+  transition: border-color var(--transition-fast),
+              box-shadow var(--transition-fast);
+  /* Allow negative values and decimals */
+  -moz-appearance: textfield;
+}
+
+/* Hide browser spin arrows */
+.temp-input::-webkit-outer-spin-button,
+.temp-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.temp-input::placeholder {
+  color: var(--color-text-muted);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+}
+
+.temp-input:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* Error state applied by JS */
+.temp-input.input--error {
+  border-color: var(--color-error);
+  background-color: var(--color-error-bg);
+}
+
+.temp-input.input--error:focus {
+  box-shadow: 0 0 0 3px rgba(185, 28, 28, 0.15);
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   Select wrapper + custom select
+   ───────────────────────────────────────────────────────────────── */
+.select-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: stretch;
+}
+
+/* Full-width variant for the "Convert to" row */
+.select-wrapper--full {
+  width: 100%;
+}
+
+.select-wrapper::after {
+  content: '';
+  pointer-events: none;
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid var(--color-text-muted);
+}
+
+.unit-select {
+  appearance: none;
+  -webkit-appearance: none;
+  background: var(--color-surface);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-input);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 12px 36px 12px 14px;
+  cursor: pointer;
+  outline: none;
+  width: 100%;
+  transition: border-color var(--transition-fast),
+              box-shadow var(--transition-fast);
+  white-space: nowrap;
+}
+
+.unit-select:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   Validation message
+   ───────────────────────────────────────────────────────────────── */
+.validation-msg {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  min-height: 1.2em; /* reserves space so layout doesn't jump */
+  color: var(--color-error);
+  /* Hidden visually when empty, still present in DOM for aria-live */
+}
+
+.validation-msg:empty {
+  visibility: hidden;
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   Swap button row
+   ───────────────────────────────────────────────────────────────── */
+.swap-row {
+  display: flex;
+  justify-content: center;
+}
+
+.swap-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 18px;
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-accent);
+  background: var(--color-accent-light);
+  border: 1.5px solid transparent;
+  border-radius: var(--radius-btn);
+  cursor: pointer;
+  outline: none;
+  transition: background var(--transition-fast),
+              border-color var(--transition-fast),
+              color var(--transition-fast);
+}
+
+.swap-btn:hover {
+  background: #DBEAFE;
+  border-color: #BFDBFE;
+}
+
+.swap-btn:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+.swap-icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   Result card
+   ───────────────────────────────────────────────────────────────── */
+.result-card {
+  background: var(--color-bg);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-input);
+  padding: 20px 24px;
+  text-align: center;
+}
+
+.result-label {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 6px;
+}
+
+.result-value {
+  font-size: clamp(1.75rem, 6vw, 2.5rem);
+  font-family: var(--font-mono);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  letter-spacing: -0.02em;
+  word-break: break-all;
+}
+
+/* Success tint when a valid result is showing */
+.result-card.result--valid {
+  border-color: #BBF7D0;
+  background: #F0FDF4;
+}
+
+.result-card.result--valid .result-value {
+  color: var(--color-success);
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   Reset button
+   ───────────────────────────────────────────────────────────────── */
+.action-row {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.reset-btn {
+  padding: 9px 20px;
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  background: transparent;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-btn);
+  cursor: pointer;
+  outline: none;
+  transition: color var(--transition-fast),
+              border-color var(--transition-fast),
+              background var(--transition-fast);
+}
+
+.reset-btn:hover {
+  color: var(--color-text-primary);
+  border-color: #C0C7D0;
+  background: #F9FAFB;
+}
+
+.reset-btn:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   Footer
+   ───────────────────────────────────────────────────────────────── */
+.page-footer {
+  text-align: center;
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   Responsive — small screens
+   ───────────────────────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  body {
+    align-items: flex-start;
+    padding: 20px 12px 40px;
+  }
+
+  .card {
+    padding: 24px 20px;
+    gap: 16px;
+  }
+
+  /* Stack the numeric input and unit select vertically on very small screens */
+  .input-row {
+    grid-template-columns: 1fr;
+  }
+
+  .select-wrapper {
+    width: 100%;
+  }
+
+  .result-value {
+    font-size: 1.75rem;
+  }
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   Reduced motion — disable transitions for users who prefer it
+   ───────────────────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}

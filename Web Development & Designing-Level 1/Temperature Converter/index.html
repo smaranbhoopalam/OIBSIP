@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temperature Converter | OASIS Infobyte</title>
+  <meta name="description" content="A clean, accessible temperature converter supporting Celsius, Fahrenheit, and Kelvin. Built for the OASIS Infobyte Level 1 internship.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="page-wrapper">
+
+    <header class="page-header">
+      <h1 class="page-title">Temperature Converter</h1>
+      <p class="page-subtitle">Convert between Celsius, Fahrenheit, and Kelvin instantly.</p>
+    </header>
+
+    <main>
+      <div class="card" role="main">
+
+        <!-- ── Input row ─────────────────────────────────────── -->
+        <div class="field-group">
+          <label class="field-label" for="temp-input">Temperature</label>
+          <div class="input-row">
+            <input
+              class="temp-input"
+              type="number"
+              id="temp-input"
+              name="temperature"
+              placeholder="Enter value"
+              autocomplete="off"
+              aria-describedby="validation-msg"
+              step="any"
+            >
+            <div class="select-wrapper">
+              <select class="unit-select" id="from-unit" aria-label="Convert from unit">
+                <option value="celsius">°C — Celsius</option>
+                <option value="fahrenheit">°F — Fahrenheit</option>
+                <option value="kelvin">K — Kelvin</option>
+              </select>
+            </div>
+          </div>
+          <!-- Validation message – always in the DOM so layout is stable -->
+          <p class="validation-msg" id="validation-msg" role="alert" aria-live="assertive"></p>
+        </div>
+
+        <!-- ── Swap button ────────────────────────────────────── -->
+        <div class="swap-row">
+          <button class="swap-btn" id="swap-btn" type="button" aria-label="Swap source and destination units">
+            <svg class="swap-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7 16V4m0 0L3 8m4-4l4 4"/>
+              <path d="M17 8v12m0 0l4-4m-4 4l-4-4"/>
+            </svg>
+            <span>Swap</span>
+          </button>
+        </div>
+
+        <!-- ── Output row ─────────────────────────────────────── -->
+        <div class="field-group">
+          <label class="field-label" for="to-unit">Convert to</label>
+          <div class="select-wrapper select-wrapper--full">
+            <select class="unit-select" id="to-unit" aria-label="Convert to unit">
+              <option value="celsius">°C — Celsius</option>
+              <option value="fahrenheit" selected>°F — Fahrenheit</option>
+              <option value="kelvin">K — Kelvin</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- ── Result ─────────────────────────────────────────── -->
+        <div class="result-card" aria-live="polite" aria-atomic="true" aria-label="Conversion result">
+          <p class="result-label">Result</p>
+          <p class="result-value" id="result-value">—</p>
+        </div>
+
+        <!-- ── Reset button ───────────────────────────────────── -->
+        <div class="action-row">
+          <button class="reset-btn" id="reset-btn" type="button" aria-label="Reset all fields to their initial state">
+            Reset
+          </button>
+        </div>
+
+      </div><!-- /.card -->
+    </main>
+
+    <footer class="page-footer">
+      <p>OASIS Infobyte — Web Development &amp; Designing · Level 1 · Task 3</p>
+    </footer>
+
+  </div><!-- /.page-wrapper -->
+
+  <script src="script.js"></script>
+</body>
+</html>

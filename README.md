@@ -16,7 +16,7 @@ This repository contains all projects completed as part of the [OASIS Infobyte](
 |---|---------|-------------|--------------|--------|--------|
 | Task 1 | **Cupzilla** | Landing page for a cup-based physical advertising platform | HTML5, CSS3 | [`Web Development & Designing-Level 1/Cupzilla/`](./Web%20Development%20%26%20Designing-Level%201/Cupzilla/) | ✅ Complete |
 | Task 2 | **Personal Portfolio** | Single-page developer portfolio showcasing skills and projects | HTML5, CSS3, Vanilla JS | [`Web Development & Designing-Level 1/Portfolio/`](./Web%20Development%20%26%20Designing-Level%201/Portfolio/) | ✅ Complete |
-| Task 3 | Temperature Converter | — | — | — | 🔲 Not started |
+| Task 3 | **Temperature Converter** | Live temperature conversion between Celsius, Fahrenheit, and Kelvin | HTML5, CSS3, Vanilla JS | [`Web Development & Designing-Level 1/Temperature Converter/`](./Web%20Development%20%26%20Designing-Level%201/Temperature%20Converter/) | ✅ Complete |
 
 ---
 
@@ -44,6 +44,18 @@ A single-page personal developer portfolio with a dark, technical aesthetic. Sho
 
 ---
 
+## Task 3 — Temperature Converter
+
+**Folder:** [`Web Development & Designing-Level 1/Temperature Converter/`](./Web%20Development%20%26%20Designing-Level%201/Temperature%20Converter/)
+
+A live temperature converter supporting Celsius, Fahrenheit, and Kelvin in any direction. Implements physical validation (absolute-zero limits), a swap button, a reset button, and accessible result announcements.
+
+**Key features:** live conversion on input, absolute-zero validation, swap and reset controls, `aria-live` result region, responsive layout, no external dependencies.
+
+→ See [`Temperature Converter/README.md`](./Web%20Development%20%26%20Designing-Level%201/Temperature%20Converter/README.md) for full documentation.
+
+---
+
 ## Repository Structure
 
 ```text
@@ -56,9 +68,14 @@ OIBSIP/
     │   ├── index.html
     │   ├── style.css
     │   └── README.md
-    └── Portfolio/                            ← Task 2: Personal Portfolio
+    ├── Portfolio/                            ← Task 2: Personal Portfolio
+    │   ├── index.html
+    │   ├── style.css
+    │   └── README.md
+    └── Temperature Converter/                ← Task 3: Temperature Converter
         ├── index.html
         ├── style.css
+        ├── script.js
         └── README.md
 ```
 
